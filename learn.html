@@ -1,182 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn Samskritam - SB Yuva</title>
-    <link rel="stylesheet" href="src/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBYuva - Learn</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#F47B20',
+              dark: '#C85E10',
+              light: '#FCEBD6',
+            },
+            secondary: '#8B1A1A',
+            accent: '#D4A017',
+            neutral: {
+              bg: '#FAFAF7',
+              surface: '#F5F0E8',
+              border: '#E0D5C5',
+            },
+            text: {
+              primary: '#1A1A1A',
+              secondary: '#5A5A5A',
+              muted: '#9A9A9A',
+            },
+            functional: {
+              success: '#2E7D32',
+              warning: '#F9A825',
+              error: '#C62828',
+              link: '#C85E10',
+              linkHover: '#8B1A1A',
+            }
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply bg-neutral-bg text-text-primary font-sans;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        @apply font-bold text-text-primary;
+      }
+      a {
+        @apply text-functional-link hover:text-functional-linkHover transition-colors;
+      }
+    }
+  </style>
 </head>
+<body class="flex flex-col min-h-screen">
 
-<body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <span><a href="#">Join WhatsApp</a></span>
-            <span><a href="https://sbusa.org/donate">Donate</a></span>
-        </div>
+  <!-- Navbar will be injected here -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center p-8">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-4">Learn</h1>
+      <p class="text-xl text-text-secondary">Coming Soon</p>
     </div>
+  </main>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">SB <span style="color: var(--secondary)">Yuva</span></a>
-
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <span class="devanagari">समुदाया:</span>
-                        <span class="english">Communities</span>
-                    </a>
-                    <div class="dropdown">
-                        <a href="csn.html">College Students (CSN)</a>
-                        <a href="snyp.html">Young Professionals (SNYP)</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a href="learn.html" class="nav-link">
-                        <span class="devanagari">संस्कृतम् शिक्षेत्</span>
-                        <span class="english">Learn Samskritam</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="yuvavani.html" class="nav-link">
-                        <span class="devanagari">युवावाणी</span>
-                        <span class="english">Yuva Vani</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="events.html" class="nav-link">
-                        <span class="devanagari">वृत्तान्ता:</span>
-                        <span class="english">Events</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        <span class="devanagari">संस्कृतभारती</span>
-                        <span class="english">About</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="cta-button">
-                        <span class="devanagari">मेल्यताम्</span>
-                        <span class="english">Join Us</span>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <!-- Hero -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Learning Paths</h1>
-                <p>From absolute beginners to advanced speakers, we have a path for you.</p>
-            </div>
-        </section>
-
-        <!-- Yuvagana Specific Classes -->
-        <section class="container" style="padding: 4rem 1.5rem;">
-            <div class="section-header">
-                <h2>Yuvagana Featured Classes</h2>
-                <p>Our flagship yearly curriculum with a slightly tailored syllabus for young adults.</p>
-            </div>
-
-            <div class="learning-grid">
-                <!-- Level 1 -->
-                <div class="learning-card" style="border-top: 5px solid var(--primary);">
-                    <div class="icon-header s2s">L1</div>
-                    <h3>Level 1: Pravesha</h3>
-                    <p class="desc">A foundation level class focusing on grammar, vocabulary, and basic conversational
-                        skills.</p>
-                    <ul class="features">
-                        <li>Youth-Centric Syllabus</li>
-                        <li>Yearly Schedule</li>
-                        <li>Collaborative Learning</li>
-                    </ul>
-                    <a href="https://sbusa.org/yuvagana-registration" class="btn btn-primary">Register for L1</a>
-                </div>
-
-                <!-- Level 2 -->
-                <div class="learning-card" style="border-top: 5px solid var(--secondary);">
-                    <div class="icon-header dlp">L2</div>
-                    <h3>Level 2: Parichaya</h3>
-                    <p class="desc">Deepen your understanding of structure and literature through intermediate study.
-                    </p>
-                    <ul class="features">
-                        <li>Complex Sentence Structure</li>
-                        <li>Shloka Interpretation</li>
-                        <li>Peer Discussion Groups</li>
-                    </ul>
-                    <a href="https://sbusa.org/yuvagana-registration" class="btn btn-secondary">Enroll in L2</a>
-                </div>
-
-                <!-- Pre-Advanced -->
-                <div class="learning-card" style="border-top: 5px solid var(--accent);">
-                    <div class="icon-header local">ADV</div>
-                    <h3>Pre-Advanced</h3>
-                    <p class="desc">For those ready to delve into higher-level texts and advanced conversational
-                        fluency.</p>
-                    <ul class="features">
-                        <li>Literature Exploration</li>
-                        <li>Advanced Composition</li>
-                        <li>Leadership Preparation</li>
-                    </ul>
-                    <a href="https://sbusa.org/yuvagana-registration" class="btn btn-outline">Join Pre-Advanced</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- General Programs -->
-        <section style="background: var(--bg-alt); padding: 6rem 0;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Other Learning Options</h2>
-                    <p>These programs are open to the wider community and offered by Samskrita Bharati USA.</p>
-                </div>
-
-                <div class="grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
-                    <div class="audience-card" style="background: white; padding: 2rem;">
-                        <h4>Samskritam to Samskritam (S2S)</h4>
-                        <p style="margin: 1rem 0; font-size: 0.9rem;">Fast-paced, immersion-based learning.</p>
-                        <a href="https://sbusa.org/s2s" style="color: var(--primary); font-weight: 700;">View on
-                            SBUSA.org &rarr;</a>
-                    </div>
-                    <div class="audience-card" style="background: white; padding: 2rem;">
-                        <h4>Distance Learning (DLP)</h4>
-                        <p style="margin: 1rem 0; font-size: 0.9rem;">Self-paced academic diploma courses.</p>
-                        <a href="https://sbusa.org/dlp" style="color: var(--primary); font-weight: 700;">View on
-                            SBUSA.org &rarr;</a>
-                    </div>
-                    <div class="audience-card" style="background: white; padding: 2rem;">
-                        <h4>Local Kendrams</h4>
-                        <p style="margin: 1rem 0; font-size: 0.9rem;">Weekly classes in your local neighborhood.</p>
-                        <a href="https://sbusa.org/kendrams" style="color: var(--primary); font-weight: 700;">Search
-                            Kendrams &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                &copy; 2024 Samskrita Bharati USA.
-            </div>
-        </div>
-    </footer>
-
-    <script type="module" src="src/main.js"></script>
+  <script src="components.js"></script>
 </body>
-
 </html>
