@@ -1,192 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SB Yuva - Connecting Youth, Preserving Culture</title>
-  <link rel="stylesheet" href="src/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBYuva - Home</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#F47B20',
+              dark: '#C85E10',
+              light: '#FCEBD6',
+            },
+            secondary: '#8B1A1A',
+            accent: '#D4A017',
+            neutral: {
+              bg: '#FAFAF7',
+              surface: '#F5F0E8',
+              border: '#E0D5C5',
+            },
+            text: {
+              primary: '#1A1A1A',
+              secondary: '#5A5A5A',
+              muted: '#9A9A9A',
+            },
+            functional: {
+              success: '#2E7D32',
+              warning: '#F9A825',
+              error: '#C62828',
+              link: '#C85E10',
+              linkHover: '#8B1A1A',
+            }
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply bg-neutral-bg text-text-primary font-sans;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        @apply font-bold text-text-primary;
+      }
+      a {
+        @apply text-functional-link hover:text-functional-linkHover transition-colors;
+      }
+    }
+  </style>
 </head>
+<body class="flex flex-col min-h-screen">
 
-<body>
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="container">
-      <span><a href="#">Join WhatsApp</a></span>
-      <span><a href="https://sbusa.org/donate">Donate</a></span>
-    </div>
-  </div>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">SB <span style="color: var(--secondary)">Yuva</span></a>
+  <!-- Main Content -->
+  <main class="flex-grow">
 
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="devanagari">समुदाया:</span>
-            <span class="english">Communities</span>
-          </a>
-          <div class="dropdown">
-            <a href="csn.html">College Students (CSN)</a>
-            <a href="snyp.html">Young Professionals (SNYP)</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a href="learn.html" class="nav-link">
-            <span class="devanagari">संस्कृतम् शिक्षेत्</span>
-            <span class="english">Learn Samskritam</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="yuvavani.html" class="nav-link">
-            <span class="devanagari">युवावाणी</span>
-            <span class="english">Yuva Vani</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="events.html" class="nav-link">
-            <span class="devanagari">वृत्तान्ता:</span>
-            <span class="english">Events</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">
-            <span class="devanagari">संस्कृतभारती</span>
-            <span class="english">About</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="cta-button">
-            <span class="devanagari">मेल्यताम्</span>
-            <span class="english">Join Us</span>
-          </a>
-        </li>
-      </ul>
-
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
-  </nav>
-
-  <main>
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h1>Connecting Youth.<br>Preserving Culture.</h1>
-          <p>Experience the joy of Samskritam. Join a vibrant community of students and young professionals across North
-            America.</p>
-          <div class="hero-buttons">
-            <a href="#csn" class="btn btn-primary">I am a Student</a>
-            <a href="#snyp" class="btn btn-secondary"
-              style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.5);">I
-              am a Young Professional</a>
-          </div>
+    <section class="bg-primary-light py-20 px-4 sm:px-6 lg:px-8 text-center border-b border-neutral-border">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-primary-dark mb-6 tracking-tight">
+          Welcome to SB Yuva
+        </h1>
+        <p class="text-xl md:text-2xl text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed">
+          The youth wing of Samskrit Bharati USA, dedicated to spreading Sanskrit among young Indians and the broader youth community. Connect through structured learning pathways, events, and regional chapters.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="communities.html#csn" class="inline-flex justify-center items-center px-8 py-3 text-lg font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors shadow-sm">
+            Join CSN
+          </a>
+          <a href="communities.html#snyp" class="inline-flex justify-center items-center px-8 py-3 text-lg font-medium rounded-md text-white bg-secondary hover:bg-red-900 transition-colors shadow-sm">
+            Join SNYP
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Audience Segments (The Buckets) -->
-    <section class="audience-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Find Your Community</h2>
-          <p>Whether you're on campus or starting your career, we have a space for you.</p>
-        </div>
+    <!-- Pathway Selector Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Choose Your Pathway</h2>
+        <p class="text-lg text-text-secondary">Find the community that fits your stage in life.</p>
+      </div>
 
-        <div class="audience-grid">
-          <!-- CSN Card -->
-          <div class="audience-card" id="csn">
-            <div class="card-image-placeholder">
-              COLLEGE SAMSKRITAM NETWORK
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <!-- CSN Card -->
+        <a href="communities.html#csn" class="group block no-underline text-text-primary hover:text-text-primary">
+          <div class="bg-neutral-surface border border-neutral-border rounded-xl p-8 h-full transition-transform transform group-hover:-translate-y-2 group-hover:shadow-lg flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-primary-light text-primary-dark rounded-full flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+              </svg>
             </div>
-            <div class="card-content">
-              <h3>College Students (CSN)</h3>
-              <p>Discover chapters at universities across the country. Connect with peers, attend campus events, and
-                keep in touch with your roots while getting your degree.</p>
-              <a href="csn.html" class="btn btn-secondary">Find My Chapter</a>
-            </div>
+            <h3 class="text-3xl font-bold mb-4 text-primary-dark group-hover:text-primary transition-colors">CSN</h3>
+            <p class="text-xl font-medium mb-4">Campus Samskritam Network</p>
+            <p class="text-text-secondary mb-6 flex-grow">For college students and campus communities. Join the vibrant network of young learners on university campuses.</p>
+            <span class="inline-flex items-center text-primary font-bold group-hover:text-primary-dark">
+              Explore CSN Chapters
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
           </div>
+        </a>
 
-          <!-- SNYP Card -->
-          <div class="audience-card" id="snyp">
-            <div class="card-image-placeholder">
-              YOUNG PROFESSIONALS
+        <!-- SNYP Card -->
+        <a href="communities.html#snyp" class="group block no-underline text-text-primary hover:text-text-primary">
+          <div class="bg-neutral-surface border border-neutral-border rounded-xl p-8 h-full transition-transform transform group-hover:-translate-y-2 group-hover:shadow-lg flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-amber-100 text-secondary rounded-full flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
             </div>
-            <div class="card-content">
-              <h3>Young Professionals (SNYP)</h3>
-              <p>Balance your career with culture. Join networking events, weekend retreats, and evening sessions
-                designed for the working schedule.</p>
-              <a href="snyp.html" class="btn btn-secondary">View Upcoming Sessions</a>
-            </div>
+            <h3 class="text-3xl font-bold mb-4 text-secondary group-hover:text-red-900 transition-colors">SNYP</h3>
+            <p class="text-xl font-medium mb-4">Samskritam Network for Young Professionals</p>
+            <p class="text-text-secondary mb-6 flex-grow">For working professionals aged 22–35. Connect, network, and grow your Sanskrit journey with peers.</p>
+            <span class="inline-flex items-center text-secondary font-bold group-hover:text-red-900">
+              Explore SNYP Sessions
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
-    <!-- Flagship Event -->
-    <section class="flagship-section" id="dhimahi">
-      <div class="container">
-        <div class="flagship-content">
-          <span class="flagship-tag">Flagship Annual Retreat</span>
-          <h2>Camp Dhimahi</h2>
-          <p>An immersive residential program for youth. Connect with yourself, your culture, and a lifelong community
-            of friends.</p>
-          <a href="dhimahi.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">Explore the
-            Experience</a>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>SB Yuva</h4>
-          <p style="opacity: 0.8; line-height: 1.6;">Connecting youth across North America through the joy of
-            Samskritam.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Communities</h4>
-          <ul>
-            <li><a href="#csn">College Students (CSN)</a></li>
-            <li><a href="#snyp">Young Professionals (SNYP)</a></li>
-            <li><a href="#">Start a Chapter</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Learn</h4>
-          <ul>
-            <li><a href="#">Samskritam to Samskritam (S2S)</a></li>
-            <li><a href="#">Distance Learning (DLP)</a></li>
-            <li><a href="#">Scholarships</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@sbyuva.org">info@sbyuva.org</a></li>
-            <li><a href="#">Join WhatsApp Community</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; 2024 Samskrita Bharati USA. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <script type="module" src="src/main.js"></script>
+  <!-- Load Components (Navbar) -->
+  <script src="components.js"></script>
 </body>
-
 </html>
