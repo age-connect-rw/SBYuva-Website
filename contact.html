@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SBYuva - Contact</title>
+  <title>SBYuva - Contact Us</title>
 
   <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,6 +63,12 @@
       a {
         @apply text-functional-link hover:text-functional-linkHover transition-colors;
       }
+      input, textarea, select {
+        @apply bg-neutral-surface border border-neutral-border text-text-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent px-4 py-2 w-full;
+      }
+      label {
+        @apply block text-sm font-medium text-text-secondary mb-1;
+      }
     }
   </style>
 </head>
@@ -72,13 +78,102 @@
   <div id="navbar-placeholder"></div>
 
   <!-- Main Content -->
-  <main class="flex-grow flex items-center justify-center p-8">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold mb-4">Contact</h1>
-      <p class="text-xl text-text-secondary">Coming Soon</p>
+  <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 w-full max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-primary-dark mb-4">Contact Us</h1>
+      <p class="text-xl text-text-secondary">Have questions or want to get involved? We'd love to hear from you.</p>
+    </div>
+
+    <div class="bg-white border border-neutral-border rounded-xl shadow-sm p-6 md:p-10">
+      <form id="contact-form" class="space-y-6">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Name -->
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <!-- City/Campus -->
+        <div>
+          <label for="location">City / Campus</label>
+          <input type="text" id="location" name="location" required placeholder="e.g. Austin, TX or Univ. of Texas">
+        </div>
+
+        <!-- Area of Interest -->
+        <div>
+          <label for="interest">Area of Interest</label>
+          <select id="interest" name="interest" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="csn">CSN - Campus Samskritam Network</option>
+            <option value="snyp">SNYP - Young Professionals</option>
+            <option value="events">Events / Camp Dhimahi</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+            Send Message
+          </button>
+        </div>
+
+        <!-- Success Message Placeholder -->
+        <div id="success-message" class="hidden mt-4 p-4 rounded-md bg-green-50 text-functional-success border border-green-200 text-center font-medium">
+          Thank you for reaching out! Your message has been sent successfully.
+        </div>
+      </form>
     </div>
   </main>
 
   <script src="components.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent actual form submission
+
+      // Basic client-side validation could go here if needed,
+      // but 'required' attributes handle the basics.
+
+      // Hide the submit button (optional, or just disable it)
+      const btn = this.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = 'Sending...';
+      btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+      // Simulate network request delay
+      setTimeout(() => {
+        // Show success message
+        const successMsg = document.getElementById('success-message');
+        successMsg.classList.remove('hidden');
+
+        // Reset form
+        this.reset();
+
+        // Reset button
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message';
+        btn.classList.remove('opacity-75', 'cursor-not-allowed');
+
+        // Hide success message after a few seconds
+        setTimeout(() => {
+          successMsg.classList.add('hidden');
+        }, 5000);
+      }, 1000);
+    });
+  </script>
 </body>
 </html>

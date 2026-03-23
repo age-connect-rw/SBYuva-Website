@@ -72,11 +72,65 @@
   <div id="navbar-placeholder"></div>
 
   <!-- Main Content -->
-  <main class="flex-grow flex items-center justify-center p-8">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold mb-4">Article Template</h1>
-      <p class="text-xl text-text-secondary">Coming Soon</p>
+  <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 w-full max-w-4xl mx-auto">
+
+    <!-- Back Link -->
+    <div class="mb-8">
+      <a href="yuva-vani.html" class="inline-flex items-center text-text-secondary hover:text-primary font-medium transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to Yuva Vani
+      </a>
     </div>
+
+    <article class="bg-white border border-neutral-border rounded-xl shadow-sm overflow-hidden">
+      <!-- Featured Image Placeholder -->
+      <div class="h-64 md:h-96 bg-primary-light flex items-center justify-center text-primary-dark font-bold text-2xl border-b border-neutral-border">
+        [FEATURED IMAGE PLACEHOLDER]
+      </div>
+
+      <div class="p-8 md:p-12">
+        <!-- Article Header -->
+        <header class="mb-10 text-center md:text-left border-b border-neutral-border pb-8">
+          <h1 class="text-4xl md:text-5xl font-extrabold text-primary-dark mb-4 leading-tight">
+            [PLACEHOLDER: Hero Title for the Article Goes Here]
+          </h1>
+          <div class="flex flex-col md:flex-row md:items-center text-text-secondary font-medium gap-2 md:gap-4">
+            <span>By <strong class="text-text-primary">[PLACEHOLDER AUTHOR]</strong></span>
+            <span class="hidden md:inline">&bull;</span>
+            <span>[PLACEHOLDER DATE]</span>
+          </div>
+        </header>
+
+        <!-- Article Body -->
+        <div class="prose prose-lg max-w-none text-text-primary leading-relaxed">
+          <p class="text-xl text-text-secondary font-medium mb-8">
+            [PLACEHOLDER: A brief introductory paragraph that sets the stage for the article content.]
+          </p>
+
+          <p class="mb-6">
+            [PLACEHOLDER: Rich body text area. This is where the main content of the article will go. It can consist of multiple paragraphs discussing various aspects of Samskritam, youth engagement, cultural reflections, or experiences from events like Camp Dhimahi. The layout supports standard text formatting.]
+          </p>
+
+          <!-- Pull Quote Block -->
+          <blockquote class="my-10 pl-6 py-2 border-l-4 border-secondary bg-neutral-surface rounded-r-lg italic text-2xl font-medium text-secondary">
+            "[PLACEHOLDER PULL QUOTE: This is an impactful statement or quote pulled from the main text to highlight an important point and break up the flow visually.]"
+          </blockquote>
+
+          <p class="mb-6">
+            [PLACEHOLDER: More body text following the pull quote. The structured layout makes it easy to read long-form content across different devices, from mobile phones to desktop monitors. The font choice and spacing are optimized for readability.]
+          </p>
+
+          <h2 class="text-2xl font-bold text-primary-dark mt-10 mb-4">[PLACEHOLDER SUBHEADING]</h2>
+
+          <p class="mb-6">
+            [PLACEHOLDER: Final concluding paragraph wrapping up the article's thoughts.]
+          </p>
+        </div>
+      </div>
+    </article>
+
   </main>
 
   <script src="components.js"></script>
