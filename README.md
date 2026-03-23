@@ -68,7 +68,6 @@ This project uses a fully automated AI coding workflow:
 | GitHub | Stores code, manages Pull Requests |
 | GitHub Pages | Auto-deploys site on every merge to main |
 | Google Sites (embed) | Hosts paid domain; embeds GitHub Pages URL |
-| Perplexity Pro | Research and Jules prompt crafting |
 
 ### How to Make Changes
 1. Go to jules.google.com → New Task → select SBYuva-Website
