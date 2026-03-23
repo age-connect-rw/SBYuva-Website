@@ -141,3 +141,80 @@
 - One or two non-conflicting sections per Pull Request maximum
 - Always confirm mobile responsiveness before submitting PR
 - Use placeholder text [PLACEHOLDER] where real content is missing
+
+---
+
+## Prompt Templates for Jules Tasks
+
+### Template 1 — Content Update
+Use when replacing placeholder text or adding real content.
+
+    ## Task: Content Update — [PAGE NAME]
+
+    **File to edit:** [filename.html]
+    **Do not touch:** [files Jules must not modify]
+
+    ### Content to Replace
+    | Placeholder | Real Content |
+    |---|---|
+    | [PLACEHOLDER TEXT] | Real text here |
+
+    ### New Content to Add
+    - Section: [section name]
+    - Position: [below/above which section]
+    - Content: [actual text or description]
+
+    ### Rules
+    - Maintain all colors and fonts from AGENTS.md
+    - Do not restructure page layout
+    - Preserve mobile responsiveness
+
+### Template 2 — New Feature or Functionality
+Use when adding interactive elements, forms, modals, toggles.
+
+    ## Task: New Feature — [FEATURE NAME]
+
+    **Files to edit:** [list files]
+    **Do not create new files unless listed here**
+
+    ### What This Feature Does
+    [1–3 sentences describing user behaviour]
+
+    ### Inputs / Triggers
+    - Triggered by: [e.g. clicking .chapter-card]
+    - Data source: [hardcoded in HTML / JS array]
+
+    ### Expected Output
+    - [Bullet list of expected results]
+
+    ### Technical Constraints
+    - Vanilla JavaScript only
+    - Tailwind CSS classes only
+    - Must work on mobile
+
+    ### Do Not
+    - No npm packages
+    - No alert() or confirm()
+    - Do not modify components.js
+
+### Template 3 — Bug Fix
+Use when something looks wrong or broken after a merge.
+
+    ## Task: Fix — [SHORT DESCRIPTION]
+
+    **File with issue:** [filename]
+
+    ### What Is Wrong
+    [Describe exactly what you see on screen]
+
+    ### Where to Look
+    - Component: [navbar / hero / form etc]
+    - CSS class or line reference if known
+
+    ### Expected Correct Behaviour
+    [Describe what it should look like when fixed]
+
+    ### Rules
+    - Fix only this issue
+    - Do not restyle or refactor anything else
+    - Do not change colors or fonts
