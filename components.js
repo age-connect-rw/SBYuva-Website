@@ -10,6 +10,7 @@ function loadNavbar() {
           <!-- Desktop menu -->
           <div class="hidden md:flex items-center space-x-8">
             <a href="index.html" class="text-text-primary hover:text-primary-dark transition-colors font-medium">Home</a>
+            <a href="about.html" class="text-text-primary hover:text-primary-dark transition-colors font-medium">About</a>
             <a href="communities.html" class="text-text-primary hover:text-primary-dark transition-colors font-medium">Communities</a>
             <a href="learn.html" class="text-text-primary hover:text-primary-dark transition-colors font-medium">Learn Samskritam</a>
             <a href="yuva-vani.html" class="text-text-primary hover:text-primary-dark transition-colors font-medium">Yuva Vani</a>
@@ -33,6 +34,7 @@ function loadNavbar() {
       <div class="md:hidden hidden bg-neutral-surface border-t border-neutral-border" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:text-primary hover:bg-neutral-bg">Home</a>
+          <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:text-primary hover:bg-neutral-bg">About</a>
           <a href="communities.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:text-primary hover:bg-neutral-bg">Communities</a>
           <a href="learn.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:text-primary hover:bg-neutral-bg">Learn Samskritam</a>
           <a href="yuva-vani.html" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:text-primary hover:bg-neutral-bg">Yuva Vani</a>
