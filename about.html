@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBYuva - About Us</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#F47B20',
+              dark: '#C85E10',
+              light: '#FCEBD6',
+            },
+            secondary: '#8B1A1A',
+            accent: '#D4A017',
+            neutral: {
+              bg: '#FAFAF7',
+              surface: '#F5F0E8',
+              border: '#E0D5C5',
+            },
+            text: {
+              primary: '#1A1A1A',
+              secondary: '#5A5A5A',
+              muted: '#9A9A9A',
+            },
+            functional: {
+              success: '#2E7D32',
+              warning: '#F9A825',
+              error: '#C62828',
+              link: '#C85E10',
+              linkHover: '#8B1A1A',
+            }
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply bg-neutral-bg text-text-primary font-sans;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        @apply font-bold text-text-primary;
+      }
+      a {
+        @apply text-functional-link hover:text-functional-linkHover transition-colors;
+      }
+    }
+
+    /* FAQ styling for details/summary */
+    details > summary {
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary ~ * {
+      animation: sweep .3s ease-in-out;
+    }
+    @keyframes sweep {
+      0%    {opacity: 0; transform: translateY(-10px)}
+      100%  {opacity: 1; transform: translateY(0)}
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+
+    <!-- Hero Section -->
+    <section class="bg-primary-light py-20 px-4 sm:px-6 lg:px-8 text-center border-b border-neutral-border">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-primary-dark mb-6 tracking-tight">
+          Our Story
+        </h1>
+        <p class="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          Empowering the next generation to connect with their roots through language.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+
+      <!-- Mission Grid -->
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <h2 class="text-4xl font-bold mb-6 text-primary-dark">Our Mission</h2>
+          <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+            Yuvagana is the youth wing of <strong>Samskrita Bharati USA (SBUSA)</strong>. Our mission is to build a vibrant network of college students and young professionals who are passionate about learning and promoting Samskritam.
+          </p>
+          <p class="text-lg text-text-secondary leading-relaxed">
+            We believe that Samskritam is not just an ancient language, but a bridge to a rich cultural heritage, philosophy, and a global community of thinkers.
+          </p>
+        </div>
+
+        <!-- Image Placeholder -->
+        <div class="bg-secondary rounded-xl h-80 flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <span class="text-white text-2xl font-bold tracking-wider">YUVAGANA + SBUSA</span>
+        </div>
+      </div>
+
+      <!-- Audience Section -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold mb-6">Who is our Audience?</h2>
+        <p class="text-lg text-text-muted leading-relaxed">
+          We cater to young adults under 30—including college students looking for campus connections (CSN) and early-career professionals seeking a cultural balance (SNYP).
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-neutral-surface py-16 px-4 sm:px-6 lg:px-8 border-t border-neutral-border">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p class="text-lg text-text-secondary">Everything you need to know about joining SB Yuva.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <details class="group border border-neutral-border rounded-lg bg-neutral-bg overflow-hidden transition-all duration-300 hover:shadow-md">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-lg text-text-primary hover:text-primary transition-colors">
+              <span>What is the age group for SB Yuva?</span>
+              <span class="transition group-open:rotate-45 text-2xl text-primary leading-none">+</span>
+            </summary>
+            <div class="text-text-secondary p-6 pt-0 leading-relaxed border-t border-neutral-surface">
+              <p>SB Yuva is primarily for college students (College Samskritam Network) and young professionals (SNYP). Generally, this covers individuals between the ages of 18 and 35.</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 2 -->
+          <details class="group border border-neutral-border rounded-lg bg-neutral-bg overflow-hidden transition-all duration-300 hover:shadow-md">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-lg text-text-primary hover:text-primary transition-colors">
+              <span>Do I need any prior knowledge of Samskritam?</span>
+              <span class="transition group-open:rotate-45 text-2xl text-primary leading-none">+</span>
+            </summary>
+            <div class="text-text-secondary p-6 pt-0 leading-relaxed border-t border-neutral-surface">
+              <p>Absolutely not! We have tracks for absolute beginners (L1/Pravesha) as well as advanced learners. We welcome everyone regardless of their starting point.</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 3 -->
+          <details class="group border border-neutral-border rounded-lg bg-neutral-bg overflow-hidden transition-all duration-300 hover:shadow-md">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-lg text-text-primary hover:text-primary transition-colors">
+              <span>How can I start a chapter at my university?</span>
+              <span class="transition group-open:rotate-45 text-2xl text-primary leading-none">+</span>
+            </summary>
+            <div class="text-text-secondary p-6 pt-0 leading-relaxed border-t border-neutral-surface">
+              <p>It's easy! Reach out to us via the "Join Us" form or email info@sbyuva.org. Our CSN coordinators will provide you with a toolkit and guide you through the process of getting recognized by your student union.</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 4 -->
+          <details class="group border border-neutral-border rounded-lg bg-neutral-bg overflow-hidden transition-all duration-300 hover:shadow-md">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-lg text-text-primary hover:text-primary transition-colors">
+              <span>Is SB Yuva connected to Samskrita Bharati USA?</span>
+              <span class="transition group-open:rotate-45 text-2xl text-primary leading-none">+</span>
+            </summary>
+            <div class="text-text-secondary p-6 pt-0 leading-relaxed border-t border-neutral-surface">
+              <p>Yes, SB Yuva is the youth wing of Samskrita Bharati USA. We follow the same pedagogical methods but tailor our content and activities for the young adult demographic.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-bg py-8 border-t border-neutral-border text-center text-text-secondary mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p>&copy; 2024 Samskrita Bharati USA.</p>
+    </div>
+  </footer>
+
+  <!-- Load Components (Navbar) -->
+  <script src="components.js"></script>
+</body>
+</html>
